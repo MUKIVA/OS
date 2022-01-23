@@ -1,0 +1,16 @@
+C:\DEV\OS\NewRealization\NewRealization\bin\Debug\net5.0\NewRealization.exe
+C:\DEV\OS\NewRealization\NewRealization\bin\Debug\net5.0\NewRealization.deps.json
+C:\DEV\OS\NewRealization\NewRealization\bin\Debug\net5.0\NewRealization.runtimeconfig.json
+C:\DEV\OS\NewRealization\NewRealization\bin\Debug\net5.0\NewRealization.runtimeconfig.dev.json
+C:\DEV\OS\NewRealization\NewRealization\bin\Debug\net5.0\NewRealization.dll
+C:\DEV\OS\NewRealization\NewRealization\bin\Debug\net5.0\ref\NewRealization.dll
+C:\DEV\OS\NewRealization\NewRealization\bin\Debug\net5.0\NewRealization.pdb
+C:\DEV\OS\NewRealization\NewRealization\obj\Debug\net5.0\NewRealization.csproj.AssemblyReference.cache
+C:\DEV\OS\NewRealization\NewRealization\obj\Debug\net5.0\NewRealization.GeneratedMSBuildEditorConfig.editorconfig
+C:\DEV\OS\NewRealization\NewRealization\obj\Debug\net5.0\NewRealization.AssemblyInfoInputs.cache
+C:\DEV\OS\NewRealization\NewRealization\obj\Debug\net5.0\NewRealization.AssemblyInfo.cs
+C:\DEV\OS\NewRealization\NewRealization\obj\Debug\net5.0\NewRealization.csproj.CoreCompileInputs.cache
+C:\DEV\OS\NewRealization\NewRealization\obj\Debug\net5.0\NewRealization.dll
+C:\DEV\OS\NewRealization\NewRealization\obj\Debug\net5.0\ref\NewRealization.dll
+C:\DEV\OS\NewRealization\NewRealization\obj\Debug\net5.0\NewRealization.pdb
+C:\DEV\OS\NewRealization\NewRealization\obj\Debug\net5.0\NewRealization.genruntimeconfig.cache

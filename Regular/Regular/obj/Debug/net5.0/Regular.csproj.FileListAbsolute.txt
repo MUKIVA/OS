@@ -1,0 +1,16 @@
+C:\Users\mukiv\source\repos\Regular\Regular\bin\Debug\net5.0\Regular.exe
+C:\Users\mukiv\source\repos\Regular\Regular\bin\Debug\net5.0\Regular.deps.json
+C:\Users\mukiv\source\repos\Regular\Regular\bin\Debug\net5.0\Regular.runtimeconfig.json
+C:\Users\mukiv\source\repos\Regular\Regular\bin\Debug\net5.0\Regular.runtimeconfig.dev.json
+C:\Users\mukiv\source\repos\Regular\Regular\bin\Debug\net5.0\Regular.dll
+C:\Users\mukiv\source\repos\Regular\Regular\bin\Debug\net5.0\ref\Regular.dll
+C:\Users\mukiv\source\repos\Regular\Regular\bin\Debug\net5.0\Regular.pdb
+C:\Users\mukiv\source\repos\Regular\Regular\obj\Debug\net5.0\Regular.csproj.AssemblyReference.cache
+C:\Users\mukiv\source\repos\Regular\Regular\obj\Debug\net5.0\Regular.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mukiv\source\repos\Regular\Regular\obj\Debug\net5.0\Regular.AssemblyInfoInputs.cache
+C:\Users\mukiv\source\repos\Regular\Regular\obj\Debug\net5.0\Regular.AssemblyInfo.cs
+C:\Users\mukiv\source\repos\Regular\Regular\obj\Debug\net5.0\Regular.csproj.CoreCompileInputs.cache
+C:\Users\mukiv\source\repos\Regular\Regular\obj\Debug\net5.0\Regular.dll
+C:\Users\mukiv\source\repos\Regular\Regular\obj\Debug\net5.0\ref\Regular.dll
+C:\Users\mukiv\source\repos\Regular\Regular\obj\Debug\net5.0\Regular.pdb
+C:\Users\mukiv\source\repos\Regular\Regular\obj\Debug\net5.0\Regular.genruntimeconfig.cache

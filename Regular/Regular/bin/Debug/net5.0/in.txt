@@ -1,0 +1,8 @@
+R
+S->xC|xB|x|aE|aG|yF|
+B->x|yI|yF|
+C->x|yF|
+E->bC|
+F->yF|
+G->x|aG|yF|
+I->x|yI|yF|

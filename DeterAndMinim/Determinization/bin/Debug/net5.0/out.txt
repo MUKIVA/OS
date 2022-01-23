@@ -1,0 +1,9 @@
+	x	a	y	b
+S	CBH	EG	F		
+CBH	H		FI		
+EG	H	G	F	C	
+F			F		
+H					
+FI	H		FI		
+G	H	G	F		
+C	H		F		
