@@ -18,9 +18,11 @@ namespace Regular
     }
     public class AdjacencyTable
     {
-        private Dictionary<string, Dictionary<string, NodeLink?>> _table;
+        private Dictionary<string, Dictionary<string, HashSet<NodeLink?>>> _table;
+                          //Node              value   name   
+        //private Dictionary<string, Dictionary<string, NodeLink?>>
 
-        public AdjacencyTable(List<GraphArc> graph)
+        public AdjacencyTable(List<GraphArc> graph, HashSet<string> enters)
         {
             _table = new();
 
@@ -31,13 +33,20 @@ namespace Regular
             foreach (var arc in graph)
                 if (!_table.ContainsKey(arc.End.Name))
                     _table.Add(arc.End.Name, new());
-            _table.ToList().ForEach(x => { _table.ToList().ForEach(y => { x.Value.Add(y.Key, null); }); });
+            _table.ToList().ForEach(row => 
+            {
+                foreach (string enter in enters)
+                    row.Value.Add(enter, new());
+            });
+            //_table.ToList().ForEach(x => { _table.ToList().ForEach(y => { x.Value.Add(y.Key, null); }); });
 
             foreach (var arc in graph)
-                _table[arc.Start.Name][arc.End.Name] = new NodeLink(arc.End.Name, arc.Value);
+            {
+                _table[arc.Start.Name][arc.Value == null ? "EMPTY" : arc.Value].Add(new NodeLink(arc.End.Name, arc.Value));
+            }
         }
 
-        public Dictionary<string, Dictionary<string, NodeLink?>> Table
+        public Dictionary<string, Dictionary<string, HashSet<NodeLink?>>> Table
         {
             get => _table;
         }
@@ -66,19 +75,21 @@ namespace Regular
         private void Build()
         {
             do
-            { 
-                while (BracketHandler()) continue;     // Убиваем последовательные скобки ")("
-                while (OrDelimiterHandler()) continue; // Избавляемся от |
-            } while (OpenBrackets()) ;                 // Делаем пока есть "()"
-            while (ConcatenationHandler()) continue;   // Избавляемся от конкатенаций
-            while (LockHandler()) continue;            // Избавляемся от *
+            {
+                while (BracketHandler()) continue;          // Убиваем последовательные скобки ")("
+                while (OrDelimiterHandler()) continue;      // Избавляемся от |
+                while (ExpressionSimplification()) continue;// Избавление от "()*"
+            } while (OpenBrackets()) ;                      // Делаем пока есть "()"
+            while (ConcatenationHandler()) continue;        // Избавляемся от конкатенаций
+            while (LockHandler()) continue;                 // Избавляемся от *
             CleanEmpty();
             GC.Collect();
         }
+
         private void CleanEmpty()
         {
-            var wayTable = new AdjacencyTable(_graph);
             var header = _graph.Select(arc => arc.Value).Where(value => value != null).ToHashSet();
+            var wayTable = new AdjacencyTable(_graph, header);
             Dictionary<HashSet<Node>, Dictionary<string, HashSet<Node>>> eraseTable = new();
             HashSet<(string name, Node node)> nodes = new();
             //Получаем ссылки на все ноды
@@ -99,8 +110,8 @@ namespace Regular
                     _.Add(nodes.FirstOrDefault(n => n.name == name).node);
                     var emptyWay = wayTable.Table[name]
                         .Select(x => x.Value)
-                        .Where(y => y.HasValue && y?.Value == null).ToList();
-                    emptyWay.ForEach(way => q.Enqueue(way?.Name));
+                        .Where(y => y.Any(n => n.HasValue && n?.Value == null));
+                    emptyWay.ToList().ForEach(x => x.ToList().ForEach(way => q.Enqueue(way?.Name)));
                 }
                 eraseTable.Add(_, new());
             }
@@ -115,8 +126,9 @@ namespace Regular
                     {
                         wayTable.Table[node.Name]
                         .Select(x => x.Value)
-                        .Where(y => y.HasValue && y?.Value == enter).ToList()
-                        .ForEach(findedNode => { _.Add(nodes.FirstOrDefault(n => n.name == findedNode.Value.Name ).node); });
+                        .Where(y => y.Any(n => n.HasValue && n?.Value == enter)).ToList()
+                        .ForEach(x => x.ToList()
+                        .ForEach(findedNode => { _.Add(nodes.FirstOrDefault(n => n.name == findedNode.Value.Name).node); }));
                     });
                 }
             }
@@ -127,6 +139,7 @@ namespace Regular
                 if (nodeName == 'H') ++nodeName;
 
                 var from = nodeInfo.Key.First();
+                if (nodeInfo.Key.Any(x => x == _endNode)) from.IsExit = true;
                 from.Name = nodeName++.ToString();
                 header.ToList().ForEach(enter => 
                 {
@@ -137,13 +150,65 @@ namespace Regular
                 });
             }
         }
-        private bool LockHandler()
+
+        private void Simplification(GraphArc arc)
         {
-            var arc = _graph.FirstOrDefault(x => x.Value != null && x.Value.Contains('*'));
+            string value = arc.Value.Substring(1, arc.Value.Length - 3);
+
+            // Создаем новую ноду
+            Node _ = CreateNode();
+            // Соединяем со старыми нодами
+            _graph.Add(new(_, arc.End, null));
+            arc.End = _;
+            arc.Value = null;
+            // Создаем новые циклические дуги
+            _graph.Add(new(_, _, value));
+        }
+
+        private void ExtendSimplification(GraphArc arc)
+        {
+            string value = arc.Value.Substring(1, arc.Value.Length - 3);
+            var subs = value.Split(OR_ACTION_CHAR, StringSplitOptions.RemoveEmptyEntries);
+
+            // Создаем новую ноду
+            Node _ = CreateNode();
+            // Соединяем со старыми нодами
+            _graph.Add(new(_, arc.End, null));
+            arc.End = _;
+            arc.Value = null;
+            // Создаем новые циклические дуги
+            foreach (string sub in subs)
+            {
+                _graph.Add(new(_, _, sub));
+            }
+        }
+
+        delegate void LockHandlerDelegate(GraphArc arc);
+        private LockHandlerDelegate GetHandler(string value)
+        {
+            return value.Contains('|') ? ExtendSimplification : Simplification;
+        }
+
+        private bool ExpressionSimplification()
+        {
+            var arc = _graph.FirstOrDefault(x => 
+                x.Value != null
+                && x.Value[^1] == '*'
+                && x.Value[0] == '('
+                && x.Value[^2] == ')');
             if (arc == null) return false;
 
-            // Обновляем граф
+            GetHandler(arc.Value)(arc);
 
+            return true;
+        }
+
+        private bool LockHandler()
+        {
+            var arc = _graph.FirstOrDefault(x => x.Value != null && x.Value.Contains('*') && x.Value.Length != 1);
+            if (arc == null) return false;
+            
+            // Обновляем граф
             string lockValue = arc.Value[0].ToString();
             var _ = CreateNode();
             GraphArc @toEnd = new(_, arc.End, null);
@@ -159,6 +224,7 @@ namespace Regular
             bool _ = false;
             foreach (GraphArc arc in _graph)
             {
+                if (arc.Value == null) continue;
                 if (arc.Value[0] == OPEN_BRACKET_CHAR && arc.Value[^1] == CLOSE_BRACKET_CHAR)
                 { 
                     arc.Value = arc.Value.Substring(1, arc.Value.Length - 2);
@@ -199,6 +265,7 @@ namespace Regular
         private Stack<int> GetSiresConcatIndex(string rx)
         {
             Stack<int> _ = new();
+            if (rx == null) return _;
             for (int i = 0; i < rx.Length; ++i)
                 if (rx[i] != LOCKING_ACTION_CHAR) _.Push(i);
             _.Push(rx.Length);
@@ -213,7 +280,7 @@ namespace Regular
             {
                 if (rx[i] == OPEN_BRACKET_CHAR) ++deepIndex;
                 if (rx[i] == CLOSE_BRACKET_CHAR) --deepIndex;
-                if (deepIndex != 0) continue;
+                if (deepIndex > 0) continue;
                 if (rx[i] == OR_ACTION_CHAR) _.Push(i);
             }
             _.Push(rx.Length);
@@ -238,9 +305,10 @@ namespace Regular
         }
         private bool ConcatenationHandler()
         {
-            var arc = _graph.FirstOrDefault(x => GetSiresConcatIndex(x.Value).Count > 2);
+            var arc = _graph.FirstOrDefault(x => 
+            GetSiresConcatIndex(x.Value).Count > 2);
             if (arc == null) return false;
-            
+
             // Получаем подстроки
             var subs = GetSubsByIndexes(arc.Value, GetSiresConcatIndex(arc.Value));
             // Обновляем граф

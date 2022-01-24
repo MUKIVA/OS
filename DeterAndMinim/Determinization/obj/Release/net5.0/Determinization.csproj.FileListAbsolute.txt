@@ -1,0 +1,16 @@
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\bin\Release\net5.0\Determinization.exe
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\bin\Release\net5.0\Determinization.deps.json
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\bin\Release\net5.0\Determinization.runtimeconfig.json
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\bin\Release\net5.0\Determinization.runtimeconfig.dev.json
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\bin\Release\net5.0\Determinization.dll
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\bin\Release\net5.0\ref\Determinization.dll
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\bin\Release\net5.0\Determinization.pdb
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\obj\Release\net5.0\Determinization.csproj.AssemblyReference.cache
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\obj\Release\net5.0\Determinization.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\obj\Release\net5.0\Determinization.AssemblyInfoInputs.cache
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\obj\Release\net5.0\Determinization.AssemblyInfo.cs
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\obj\Release\net5.0\Determinization.csproj.CoreCompileInputs.cache
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\obj\Release\net5.0\Determinization.dll
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\obj\Release\net5.0\ref\Determinization.dll
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\obj\Release\net5.0\Determinization.pdb
+C:\Users\mukiv\source\OS\DeterAndMinim\Determinization\obj\Release\net5.0\Determinization.genruntimeconfig.cache

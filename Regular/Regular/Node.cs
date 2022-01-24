@@ -10,5 +10,6 @@ namespace Regular
     {
         public string Name { get; set; }
         public Node(string name) => Name = name;
+        public bool IsExit { get; set; } = false;
     }
 }

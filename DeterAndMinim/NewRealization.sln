@@ -5,7 +5,9 @@ VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minimization", "NewRealization\Minimization.csproj", "{100D95D0-0D7A-477C-AB93-51D7787AA320}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Determinization", "Determinization\Determinization.csproj", "{D331206A-DDDA-4257-9822-690736C844FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Determinization", "Determinization\Determinization.csproj", "{D331206A-DDDA-4257-9822-690736C844FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lexer", "Lexer\Lexer.csproj", "{362B82E3-818C-4083-A9CC-F878577D53DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D331206A-DDDA-4257-9822-690736C844FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D331206A-DDDA-4257-9822-690736C844FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D331206A-DDDA-4257-9822-690736C844FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{362B82E3-818C-4083-A9CC-F878577D53DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{362B82E3-818C-4083-A9CC-F878577D53DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{362B82E3-818C-4083-A9CC-F878577D53DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{362B82E3-818C-4083-A9CC-F878577D53DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

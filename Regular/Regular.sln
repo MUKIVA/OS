@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regular", "Regular\Regular.csproj", "{655E11D5-1BDC-4590-A395-B0CEE7E7C502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Regular", "Regular\Regular.csproj", "{655E11D5-1BDC-4590-A395-B0CEE7E7C502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lexer", "Lexer\Lexer.csproj", "{EA3BD697-CDFB-42D1-AC97-FFE94AA33BBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{655E11D5-1BDC-4590-A395-B0CEE7E7C502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{655E11D5-1BDC-4590-A395-B0CEE7E7C502}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{655E11D5-1BDC-4590-A395-B0CEE7E7C502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA3BD697-CDFB-42D1-AC97-FFE94AA33BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3BD697-CDFB-42D1-AC97-FFE94AA33BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3BD697-CDFB-42D1-AC97-FFE94AA33BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3BD697-CDFB-42D1-AC97-FFE94AA33BBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

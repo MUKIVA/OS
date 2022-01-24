@@ -9,8 +9,8 @@ namespace Regular
     public class RGrammerBuilder
     {
         private HashSet<(string name, Node node)> _nodes = new();
-        private Node _endNode;
         private Node _startNode;
+        private Node _endNode;
         private List<GraphArc> _graph;
         public RGrammerBuilder(List<GraphArc> graph)
         {
@@ -26,7 +26,13 @@ namespace Regular
             _nodes = VWithInArc.Union(VWithOutArc).ToHashSet();
 
             _startNode = VWithInArc.Except(VWithOutArc).ToList().First().node;
-            _endNode = VWithOutArc.Except(VWithInArc).ToList().First().node;
+            try
+            {
+                _endNode = VWithOutArc.Except(VWithInArc).ToList().First().node;
+            }
+            catch
+            { 
+            }
 
             if (_startNode.Name == "S") return;
 
@@ -42,10 +48,12 @@ namespace Regular
             string grammer = "R\n";
             foreach (var node in _nodes)
             {
-                if (node.node == _endNode) continue;
+                //Берем информацию о ноде
+                var info = _graph.Select(x => x).Where(y => y.Start == node.node).ToList();
+                if (info.Count == 0) continue;
                 grammer += $"{node.node.Name}->";
-                _graph.Select(x => x).Where(y => y.Start == node.node).ToList()
-                    .ForEach(to => grammer += (to.End == _endNode) ? $"{to.Value}|" : $"{to.Value}{to.End.Name}|");
+                    info.ForEach(to => grammer += (to.End == _endNode) ? $"{to.Value}|" : $"{to.Value}{to.End.Name}|");
+
                 grammer += "\n";
             }
             return grammer;
