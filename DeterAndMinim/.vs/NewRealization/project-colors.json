@@ -5,7 +5,17 @@
       "ProjectGuid": "d331206a-ddda-4257-9822-690736c844fe",
       "DisplayName": "Determinization",
       "ColorIndex": 0
+    },
+    "362b82e3-818c-4083-a9cc-f878577d53de": {
+      "ProjectGuid": "362b82e3-818c-4083-a9cc-f878577d53de",
+      "DisplayName": "Lexer",
+      "ColorIndex": 1
+    },
+    "100d95d0-0d7a-477c-ab93-51d7787aa320": {
+      "ProjectGuid": "100d95d0-0d7a-477c-ab93-51d7787aa320",
+      "DisplayName": "Minimization",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }

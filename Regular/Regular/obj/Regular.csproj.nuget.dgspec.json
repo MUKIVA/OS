@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mukiv\\source\\repos\\Regular\\Regular\\Regular.csproj": {}
+    "C:\\Users\\mukiv\\source\\OS\\Regular\\Regular\\Regular.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mukiv\\source\\repos\\Regular\\Regular\\Regular.csproj": {
+    "C:\\Users\\mukiv\\source\\OS\\Regular\\Regular\\Regular.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mukiv\\source\\repos\\Regular\\Regular\\Regular.csproj",
+        "projectUniqueName": "C:\\Users\\mukiv\\source\\OS\\Regular\\Regular\\Regular.csproj",
         "projectName": "Regular",
-        "projectPath": "C:\\Users\\mukiv\\source\\repos\\Regular\\Regular\\Regular.csproj",
+        "projectPath": "C:\\Users\\mukiv\\source\\OS\\Regular\\Regular\\Regular.csproj",
         "packagesPath": "C:\\Users\\mukiv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mukiv\\source\\repos\\Regular\\Regular\\obj\\",
+        "outputPath": "C:\\Users\\mukiv\\source\\OS\\Regular\\Regular\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

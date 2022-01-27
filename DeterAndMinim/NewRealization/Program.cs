@@ -7,7 +7,7 @@ namespace NewRealization
     {
         static void Main(string[] args)
         {
-            using (StreamReader sr = new("in2.txt"))
+            using (StreamReader sr = new("in.txt"))
             {
                 MinimizationController controller = new(sr, Console.Out);
                 controller.Start();

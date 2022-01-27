@@ -1,0 +1,216 @@
+Name: I
+	Type: Identifier
+	Row: 1
+	Column: 1
+Name: =
+	Type: equality token
+	Row: 1
+	Column: 4
+Name: 15
+	Type: Number constant
+	Row: 1
+	Column: 5
+Name: ;
+	Type: end action token
+	Row: 1
+	Column: 7
+Name: READLN
+	Type: readln token
+	Row: 2
+	Column: 1
+Name: (
+	Type: open bracket token
+	Row: 2
+	Column: 7
+Name: '''I'
+	Type: literal
+	Row: 2
+	Column: 8
+Name: )
+	Type: close bracket token
+	Row: 2
+	Column: 13
+Name: ;
+	Type: end action token
+	Row: 2
+	Column: 14
+Name: I
+	Type: Identifier
+	Row: 2
+	Column: 17
+Name: :=
+	Type: equate token
+	Row: 2
+	Column: 21
+Name: 15
+	Type: Number constant
+	Row: 2
+	Column: 22
+Name: ;
+	Type: end action token
+	Row: 2
+	Column: 24
+Name: I
+	Type: Identifier
+	Row: 2
+	Column: 27
+Name: :=
+	Type: equate token
+	Row: 2
+	Column: 31
+Name: 15
+	Type: Number constant
+	Row: 2
+	Column: 32
+Name: ;
+	Type: end action token
+	Row: 2
+	Column: 34
+Name: I
+	Type: Identifier
+	Row: 2
+	Column: 36
+Name: =
+	Type: equality token
+	Row: 2
+	Column: 39
+Name: 15
+	Type: Number constant
+	Row: 2
+	Column: 40
+Name: ;
+	Type: end action token
+	Row: 2
+	Column: 42
+Name: PROGRAM
+	Type: start program token
+	Row: 3
+	Column: 1
+Name: TEST
+	Type: Identifier
+	Row: 3
+	Column: 9
+Name: PROGRAM
+	Type: start program token
+	Row: 3
+	Column: 14
+Name: ;
+	Type: end action token
+	Row: 3
+	Column: 21
+Name: VAR
+	Type: declaring block variables token
+	Row: 4
+	Column: 1
+Name: I
+	Type: Identifier
+	Row: 5
+	Column: 3
+Name: :
+	Type: declaring variable token
+	Row: 5
+	Column: 5
+Name: INTEGER
+	Type: variables type token
+	Row: 5
+	Column: 6
+Name: ;
+	Type: end action token
+	Row: 5
+	Column: 13
+Name: C
+	Type: Identifier
+	Row: 6
+	Column: 3
+Name: ,
+	Type: split token
+	Row: 6
+	Column: 4
+Name: CH
+	Type: Identifier
+	Row: 6
+	Column: 6
+Name: :
+	Type: declaring variable token
+	Row: 6
+	Column: 9
+Name: CHAR
+	Type: variables type token
+	Row: 6
+	Column: 10
+Name: ;
+	Type: end action token
+	Row: 6
+	Column: 14
+Name: BEGIN
+	Type: Begin token
+	Row: 7
+	Column: 1
+Name: WRITELN
+	Type: writeln token
+	Row: 8
+	Column: 3
+Name: (
+	Type: open bracket token
+	Row: 8
+	Column: 10
+Name: ''' NOT EQUAL <>'
+	Type: literal
+	Row: 8
+	Column: 11
+Name: )
+	Type: close bracket token
+	Row: 8
+	Column: 28
+Name: ;
+	Type: end action token
+	Row: 8
+	Column: 29
+Name: WRITELN
+	Type: writeln token
+	Row: 9
+	Column: 3
+Name: (
+	Type: open bracket token
+	Row: 9
+	Column: 10
+Name: ''''
+	Type: literal
+	Row: 9
+	Column: 11
+Name: )
+	Type: close bracket token
+	Row: 9
+	Column: 15
+Name: ;
+	Type: end action token
+	Row: 9
+	Column: 16
+Name: WRITELN
+	Type: writeln token
+	Row: 10
+	Column: 3
+Name: (
+	Type: open bracket token
+	Row: 10
+	Column: 10
+Name: 'NOT EQUAL <>'''
+	Type: literal
+	Row: 10
+	Column: 11
+Name: )
+	Type: close bracket token
+	Row: 10
+	Column: 27
+Name: ;
+	Type: end action token
+	Row: 10
+	Column: 28
+Name: END
+	Type: end block token
+	Row: 12
+	Column: 1
+Name: .
+	Type: end program token
+	Row: 12
+	Column: 4

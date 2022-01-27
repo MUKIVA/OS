@@ -1,0 +1,15 @@
+C:\Users\mukiv\source\repos\Lexer\Lexer\bin\Debug\net6.0\Lexer.exe
+C:\Users\mukiv\source\repos\Lexer\Lexer\bin\Debug\net6.0\Lexer.deps.json
+C:\Users\mukiv\source\repos\Lexer\Lexer\bin\Debug\net6.0\Lexer.runtimeconfig.json
+C:\Users\mukiv\source\repos\Lexer\Lexer\bin\Debug\net6.0\Lexer.dll
+C:\Users\mukiv\source\repos\Lexer\Lexer\bin\Debug\net6.0\ref\Lexer.dll
+C:\Users\mukiv\source\repos\Lexer\Lexer\bin\Debug\net6.0\Lexer.pdb
+C:\Users\mukiv\source\repos\Lexer\Lexer\obj\Debug\net6.0\Lexer.csproj.AssemblyReference.cache
+C:\Users\mukiv\source\repos\Lexer\Lexer\obj\Debug\net6.0\Lexer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mukiv\source\repos\Lexer\Lexer\obj\Debug\net6.0\Lexer.AssemblyInfoInputs.cache
+C:\Users\mukiv\source\repos\Lexer\Lexer\obj\Debug\net6.0\Lexer.AssemblyInfo.cs
+C:\Users\mukiv\source\repos\Lexer\Lexer\obj\Debug\net6.0\Lexer.csproj.CoreCompileInputs.cache
+C:\Users\mukiv\source\repos\Lexer\Lexer\obj\Debug\net6.0\Lexer.dll
+C:\Users\mukiv\source\repos\Lexer\Lexer\obj\Debug\net6.0\ref\Lexer.dll
+C:\Users\mukiv\source\repos\Lexer\Lexer\obj\Debug\net6.0\Lexer.pdb
+C:\Users\mukiv\source\repos\Lexer\Lexer\obj\Debug\net6.0\Lexer.genruntimeconfig.cache

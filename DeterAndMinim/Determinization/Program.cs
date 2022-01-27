@@ -8,8 +8,8 @@ namespace Determinization
     {
         static void Main(string[] args)
         {
-            using (StreamWriter sw = new(args[1]))
-            using (StreamReader sr = new(args[0]))
+            using (StreamWriter sw = new("out.txt"))
+            using (StreamReader sr = new("in2.txt"))
             {
                 DeterminizationController controller = new(sr, sw);
                 controller.Start();

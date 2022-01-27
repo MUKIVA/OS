@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "97a1b905-ce95-4fb1-9ca1-500e6fd93193": {
+      "ProjectGuid": "97a1b905-ce95-4fb1-9ca1-500e6fd93193",
+      "DisplayName": "Lexer",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
